@@ -1,11 +1,6 @@
 import * as program from 'commander';
-import * as fs from 'fs';
+import { Settings, generateBarrelDts } from './BarrelDts';
 
-interface Options {
-    source: string;
-    moduleName: string;
-    target: string;
-}
 
 var source = "index.ts";
 var moduleName = "myModule";
@@ -31,24 +26,11 @@ if (program.target) {
     targetFileName = program.target;
 }
 
-const options: Options = {
+const settings: Settings = {
     source: source,
     moduleName: moduleName,
     target: targetFileName
 };
 
-fs.readFile(options.source, (err, data) => {
-    console.log(err);
-    var file = `declare module "${options.moduleName}" {\n    `;
-    var content: string = data
-        .toString()
-        .split("\n")
-        .filter(i => !i.startsWith("//") && i.trim() != "")
-        .map(i => i.replace(".", options.moduleName))
-        .join("\n    ");
-    file += content;
-    file += "\n}";
-    fs.writeFile(targetFileName, file, (err) => {
+generateBarrelDts(settings);
 
-    });
-});
