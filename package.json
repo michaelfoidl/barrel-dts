@@ -22,8 +22,12 @@
         "url": "https://github.com/michaelfoidl/barrel-dts/issues"
     },
     "homepage": "https://github.com/michaelfoidl/barrel-dts#readme",
-    "dependencies": {},
+    "dependencies": {
+        "commander": "~2.20.0"
+    },
     "devDependencies": {
+        "@types/commander": "~2.12.2",
+        "@types/node": "~11.13.4",
         "tslint": "~5.11.0",
         "typescript": "~3.2.2"
     }
