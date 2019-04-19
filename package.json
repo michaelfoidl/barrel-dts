@@ -10,12 +10,11 @@
     },
     "homepage": "https://github.com/michaelfoidl/barrel-dts#readme",
     "bin": {
-        "barrel-dts": "./index.js"
+        "barrel-dts": "./dist/index.js"
     },
     "scripts": {
-        "copy": "ncp ./README.md ./dist/README.md && ncp ./package.json ./dist/package.json",
         "shebangify": "node shebangify.js ./dist/index.js",
-        "build": "tsc && npm run copy && npm run shebangify",
+        "build": "tsc && npm run shebangify",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -31,11 +30,9 @@
         "commander": "~2.20.0"
     },
     "devDependencies": {
-        "@types/commander": "~2.12.2",
         "@types/node": "~11.13.4",
         "tslint": "~5.11.0",
-        "typescript": "~3.2.2",
-        "ncp": "~2.0.0"
+        "typescript": "~3.2.2"
     },
     "publishConfig": {
         "access": "public"
