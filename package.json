@@ -9,8 +9,13 @@
         "url": "https://github.com/michaelfoidl/barrel-dts/issues"
     },
     "homepage": "https://github.com/michaelfoidl/barrel-dts#readme",
+    "bin": {
+        "barrel-dts": "./index.js"
+    },
     "scripts": {
-        "build": "tsc",
+        "copy": "ncp ./README.md ./dist/README.md && ncp ./package.json ./dist/package.json",
+        "shebangify": "node shebangify.js ./dist/index.js",
+        "build": "tsc && npm run copy && npm run shebangify",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -29,7 +34,8 @@
         "@types/commander": "~2.12.2",
         "@types/node": "~11.13.4",
         "tslint": "~5.11.0",
-        "typescript": "~3.2.2"
+        "typescript": "~3.2.2",
+        "ncp": "~2.0.0"
     },
     "publishConfig": {
         "access": "public"

@@ -39,6 +39,8 @@ if (program.moduleName) {
 
 if (program.target) {
     targetFileName = program.target;
+} else {
+    targetFileName = `${moduleName}.d.ts`;
 }
 
 const settings: Settings = {

@@ -1,0 +1,11 @@
+image: node:10.15.3
+
+stages:
+  - publish
+
+publish:
+  stage: publish
+  only:
+    - master
+  script:
+    - npm publish
