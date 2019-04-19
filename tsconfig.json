@@ -1,8 +1,9 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist",
         "sourceMap": true,
-        "declaration": true,
         "module": "commonjs",
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
