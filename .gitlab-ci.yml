@@ -4,6 +4,7 @@ cache:
   key: "$CI_PIPELINE_ID"
   paths:
     - ./node_modules
+    - ./dist
 
 stages:
   - install-dependencies
