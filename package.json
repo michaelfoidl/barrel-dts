@@ -1,6 +1,6 @@
 {
     "name": "@michaelfoidl/barrel-dts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Michael Foidl",
     "license": "Apache-2.0",
     "description": "Generates TypeScript declaration files for barrels.",
