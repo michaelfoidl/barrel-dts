@@ -4,6 +4,7 @@ cache:
   key: "$CI_PIPELINE_ID"
   paths:
     - ./node_modules
+    - ./dist
 
 stages:
   - install-dependencies
@@ -21,6 +22,18 @@ build:
     - install-dependencies
   script:
     - npm run build
+  artifacts:
+    name: ${CI_COMMIT_REF_SLUG}
+    paths:
+    - dist/
+    - bin/
+    - README.md
+    - LICENSE
+    - package.json
+    - package-lock.json
+    - .gitignore
+    - .npmignore
+    - tsconfig.json
 
 publish:
   stage: publish

@@ -39,3 +39,7 @@ Hooray!
 ##### 1.0.1 - Installation Fix
 
 - fixed problems with installation over `npm`
+
+##### 1.0.2 - Installation Fix
+
+- fixed problems with installation over `npm`
