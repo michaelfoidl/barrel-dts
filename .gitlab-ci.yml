@@ -1,13 +1,33 @@
 image: node:10.15.3
 
+cache:
+  key: "$CI_PIPELINE_ID"
+  paths:
+    - ./node_modules
+
 stages:
+  - install-dependencies
+  - build
   - publish
+
+install-dependencies:
+  stage: install-dependencies
+  script:
+    - npm install
+
+build:
+  stage: build
+  dependencies:
+    - install-dependencies
+  script:
+    - npm run build
 
 publish:
   stage: publish
+  dependencies:
+    - build
   only:
     - master
   script:
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-    - npm run build
     - npm publish
