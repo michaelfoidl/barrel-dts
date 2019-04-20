@@ -34,4 +34,8 @@ Hooray!
 
 ## Version History
 
-- 1.0.0: Initial Release
+### 1.0.0 - Initial Release
+
+##### 1.0.1 - Installation Fix
+
+- fixed problems with installation over `npm`

@@ -1,20 +1,19 @@
 {
     "name": "@michaelfoidl/barrel-dts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Michael Foidl",
     "license": "Apache-2.0",
     "description": "Generates TypeScript declaration files for barrels.",
-    "main": "index.js",
+    "main": "./dist/index.js",
     "bugs": {
         "url": "https://github.com/michaelfoidl/barrel-dts/issues"
     },
     "homepage": "https://github.com/michaelfoidl/barrel-dts#readme",
     "bin": {
-        "barrel-dts": "./dist/index.js"
+        "barrel-dts": "./bin/barrel-dts"
     },
     "scripts": {
-        "shebangify": "node shebangify.js ./dist/index.js",
-        "build": "tsc && npm run shebangify",
+        "build": "tsc",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
