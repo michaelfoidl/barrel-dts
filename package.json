@@ -4,7 +4,7 @@
     "author": "Michael Foidl",
     "license": "Apache-2.0",
     "description": "Generates TypeScript declaration files for barrels.",
-    "main": "index.js",
+    "main": "./dist/index.js",
     "bugs": {
         "url": "https://github.com/michaelfoidl/barrel-dts/issues"
     },
